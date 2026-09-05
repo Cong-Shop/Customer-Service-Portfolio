@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jerico Guanizo — Customer Service & Technical Support VA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f6f1e7;
+    --cream-2:#efe7d6;
+    --ink:#2b2620;
+    --ink-soft:#5a5245;
+    --gold:#b98a4a;
+    --gold-dim:#d8b988;
+    --white:#ffffff;
+    --line:#e0d6bf;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    color:var(--ink);
+  }
+  a{ color:var(--gold); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 40px; }
+  @media(max-width:640px){ .wrap{ padding:0 24px; } }
+  section{ padding:90px 0; }
+  @media(max-width:640px){ section{ padding:56px 0; } }
+
+  .eyebrow{
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding-top:80px; padding-bottom:60px; }
+  .hero-name{
+    font-size:clamp(2.6rem, 6vw, 4rem);
+    line-height:1.05;
+    margin-bottom:16px;
+  }
+  .hero-rule{
+    width:80px; height:2px;
+    background:var(--gold);
+    margin-bottom:18px;
+  }
+  .hero-role{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    margin-bottom:34px;
+    max-width:60ch;
+  }
+  .contact-line{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+  .contact-line a{ color:var(--ink); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:56px;
+    align-items:start;
+  }
+  @media(max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
+  .about-text p{ color:var(--ink-soft); margin-bottom:16px; max-width:62ch; }
+  .stat-strip{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .stat-box{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px;
+  }
+  .stat-num{
+    font-family:'Playfair Display', serif;
+    font-size:1.9rem;
+    color:var(--gold);
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .stat-label{ font-size:0.82rem; color:var(--ink-soft); }
+
+  .roles-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:28px;
+  }
+  .role-pill{
+    border:1px solid var(--gold-dim);
+    color:var(--ink);
+    border-radius:999px;
+    padding:8px 18px;
+    font-size:0.88rem;
+    background:var(--white);
+  }
+
+  /* ---------- SECTION HEADER ---------- */
+  .sec-head{ margin-bottom:44px; }
+  .sec-title{ font-size:2rem; margin-bottom:10px; }
+  .sec-sub{ color:var(--ink-soft); max-width:60ch; }
+
+  /* ---------- TIMELINE ---------- */
+  .tl-item{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:30px 32px;
+    margin-bottom:20px;
+  }
+  @media(max-width:640px){ .tl-item{ padding:22px; } }
+  .tl-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:10px;
+  }
+  .tl-role{ font-size:1.2rem; }
+  .tl-dates{ font-size:0.85rem; color:var(--gold); font-weight:600; }
+  .tl-company{ font-size:0.92rem; color:var(--ink-soft); margin-bottom:14px; }
+  .tl-desc{ color:var(--ink-soft); max-width:70ch; margin-bottom:16px; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .tag{
+    font-size:0.78rem;
+    padding:5px 12px;
+    background:var(--cream-2);
+    border-radius:4px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- CASE STUDIES ---------- */
+  .case{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:40px;
+    margin-bottom:24px;
+  }
+  @media(max-width:640px){ .case{ padding:26px; } }
+  .case-badge{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--white);
+    font-size:0.75rem;
+    font-weight:700;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .case-title{ font-size:1.6rem; margin-bottom:28px; }
+  .star-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px 36px;
+  }
+  @media(max-width:640px){ .star-grid{ grid-template-columns:1fr; } }
+  .star-block h4{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .star-block p{ color:var(--ink-soft); font-size:0.96rem; }
+  .result-line{ color:var(--ink); font-weight:600; }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+  @media(max-width:640px){ .skills-grid{ grid-template-columns:1fr; } }
+  .skill-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:26px;
+  }
+  .skill-card h4{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+  .skill-card p{ color:var(--ink-soft); font-size:0.94rem; }
+
+  /* ---------- CONTACT / CTA ---------- */
+  .cta{
+    background:var(--gold);
+    border-radius:14px;
+    padding:64px 48px;
+    text-align:center;
+  }
+  @media(max-width:640px){ .cta{ padding:40px 24px; } }
+  .cta h2{ color:var(--white); font-size:2.1rem; margin-bottom:16px; }
+  .cta p{ color:#fbf1e0; max-width:56ch; margin:0 auto 32px; }
+  .cta-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:28px;
+    font-size:0.95rem;
+  }
+  .cta-links a{
+    color:var(--white);
+    border-bottom:1px solid rgba(255,255,255,0.6);
+    padding-bottom:2px;
+  }
+  footer{
+    padding:36px 0 60px;
+    text-align:center;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(18px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .hero .eyebrow{ opacity:0; animation:fadeUp 0.6s ease forwards 0.05s; }
+  .hero-name{ opacity:0; animation:fadeUp 0.7s ease forwards 0.15s; }
+  .hero-rule{ opacity:0; transform:scaleX(0); transform-origin:left; animation:ruleGrow 0.6s ease forwards 0.4s; }
+  .hero-role{ opacity:0; animation:fadeUp 0.6s ease forwards 0.5s; }
+  .contact-line{ opacity:0; animation:fadeUp 0.6s ease forwards 0.62s; }
+  @keyframes ruleGrow{
+    from{ opacity:0; transform:scaleX(0); }
+    to{ opacity:1; transform:scaleX(1); }
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  .tl-item, .case, .stat-box, .skill-card{
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .tl-item:hover, .case:hover, .skill-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(43,38,32,0.08);
+    border-color:var(--gold-dim);
+  }
+  .stat-box:hover{
+    transform:translateY(-3px);
+    border-color:var(--gold-dim);
+  }
+  .role-pill{ transition:background 0.2s ease, transform 0.2s ease; }
+  .role-pill:hover{ background:var(--gold); color:var(--white); transform:translateY(-2px); }
+
+  .cta-links a{ transition:opacity 0.2s ease; }
+  .cta-links a:hover{ opacity:0.75; }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+      animation-duration:0.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.001ms !important;
+    }
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  /* ---------- TOOLS — STICKY HORIZONTAL GALLERY ---------- */
+  .tools-pin-wrap{ position:relative; }
+  .tools-sticky{
+    position:sticky;
+    top:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+    background:var(--cream);
+  }
+  .tools-head{ padding:0 40px; margin-bottom:36px; }
+  @media(max-width:640px){ .tools-head{ padding:0 24px; } }
+  .tools-track{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:0 calc(50vw - 150px);
+    will-change:transform;
+  }
+  @media(max-width:640px){ .tools-track{ padding:0 calc(50vw - 120px); gap:16px; } }
+  .tool-card{
+    flex:0 0 auto;
+    width:300px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:32px 28px;
+    transform:scale(0.86);
+    opacity:0.5;
+    filter:blur(2px);
+    transition:transform 0.35s ease-out, opacity 0.35s ease-out, filter 0.35s ease-out, border-color 0.2s ease-out;
+  }
+  @media(max-width:640px){ .tool-card{ width:240px; padding:24px 20px; } }
+  .tool-card.is-active{
+    border-color:var(--gold-dim);
+    box-shadow:0 16px 32px rgba(43,38,32,0.10);
+  }
+  .tool-num{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:var(--gold-dim);
+    font-size:1rem;
+    margin-bottom:16px;
+  }
+  .tool-name{ font-family:'Playfair Display', serif; font-size:1.3rem; color:var(--ink); margin-bottom:10px; }
+  .tool-desc{ color:var(--ink-soft); font-size:0.92rem; }
+  .tools-progress{
+    height:2px;
+    background:var(--line);
+    margin:36px 40px 0;
+    position:relative;
+    border-radius:2px;
+    overflow:hidden;
+  }
+  @media(max-width:640px){ .tools-progress{ margin:28px 24px 0; } }
+  .tools-progress-fill{
+    position:absolute; left:0; top:0; bottom:0;
+    width:0%;
+    background:var(--gold);
+    border-radius:2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .tools-sticky{ position:relative; height:auto; padding:60px 0; }
+    .tools-track{ flex-wrap:wrap; transform:none !important; overflow-x:auto; padding:0 40px; }
+    .tool-card{ transform:none !important; opacity:1 !important; filter:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio · 2026</div>
+    <h1 class="hero-name">Jerico Guanizo</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-role">Customer Service &amp; Technical Support Virtual Assistant — six years resolving customer, technical, and e-commerce support cases for Amazon, Shopify, Stripe, and Pearson.</p>
+    <p class="contact-line">
+      <a href="mailto:jerico.guanizo01@gmail.com">jerico.guanizo01@gmail.com</a> ·
+      <a href="tel:+63915546758">+63 915 546 758</a> ·
+      Bulan, Sorsogon, Philippines
+    </p>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <div class="eyebrow">Get to Know Me</div>
+        <h2 class="sec-title" style="margin-bottom:20px;">About Me</h2>
+        <p>Jerico Guanizo is a customer service and technical support professional with six years of experience across Amazon, Shopify, Stripe, and Pearson, spanning BPO, e-commerce merchant support, and technical troubleshooting.</p>
+        <p>He combines high-volume ticket and call handling with account verification, technical diagnostics, and cross-border workflow coordination to keep customers supported and operations running smoothly. His background includes progressing from customer service rep to team lead assistant, and building reusable tools like case-response macros to help wider teams work faster.</p>
+        <div class="roles-row">
+          <div class="role-pill">Customer Service VA</div>
+          <div class="role-pill">Technical Support VA</div>
+          <div class="role-pill">E-commerce VA</div>
+          <div class="role-pill">General VA</div>
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div class="stat-box">
+          <div class="stat-num">92%</div>
+          <div class="stat-label">CSAT on Shopify merchant support</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">60+</div>
+          <div class="stat-label">daily calls at peak volume</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3</div>
+          <div class="stat-label">consecutive months as top performer</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">6 yrs</div>
+          <div class="stat-label">across e-commerce &amp; technical support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--cream-2);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Where I've Worked</div>
+      <h2 class="sec-title">Work Experience</h2>
+      <p class="sec-sub">Five roles across customer service, technical support, and e-commerce operations.</p>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-top">
+        <div class="tl-role">Support Advisor</div>
+        <div class="tl-dates">Sep 2024 – Apr 2026</div>
+      </div>
+      <div class="tl-company">Shopify — via TaskUs · Remote</div>
+      <p class="tl-desc">Resolved 60–120 merchant support tickets daily across order, payment, and store-setup issues, maintaining a 92% CSAT.</p>
+      <div class="tag-row"><span class="tag">Shopify</span><span class="tag">Merchant Support</span></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-top">
+        <div class="tl-role">Account Analyst</div>
+        <div class="tl-dates">Nov 2023 – Mar 2024</div>
+      </div>
+      <div class="tl-company">Stripe — via TDCX · Project-based, Remote</div>
+      <p class="tl-desc">Handled roughly 5 account-verification cases daily and built 40 email macros covering recurring case scenarios to speed up team response time.</p>
+      <div class="tag-row"><span class="tag">Stripe</span><span class="tag">Account Review</span></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-top">
+        <div class="tl-role">Technical Support Advisor</div>
+        <div class="tl-dates">Feb 2023 – Sep 2023</div>
+      </div>
+      <div class="tl-company">Pearson — via Concentrix · Remote</div>
+      <p class="tl-desc">Resolved 20–30 daily technical support calls from US educators and students on MyLab and Pearson Vue access issues, holding ~80% QA.</p>
+      <div class="tag-row"><span class="tag">Technical Support</span><span class="tag">Education Platforms</span></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-top">
+        <div class="tl-role">Rebate Specialist / Customer Service Rep</div>
+        <div class="tl-dates">Jul 2022 – Dec 2022</div>
+      </div>
+      <div class="tl-company">NuVision Autoglass · Remote</div>
+      <p class="tl-desc">Managed the Philippines-side rebate workflow for windshield installations, coordinating directly with an Arizona-based counterpart while handling 30–40 customer calls.</p>
+      <div class="tag-row"><span class="tag">Rebate Processing</span><span class="tag">Cross-Border Coordination</span></div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-top">
+        <div class="tl-role">Customer Service Rep → Subject Matter Specialist → TLA</div>
+        <div class="tl-dates">Sep 2019 – Jan 2022</div>
+      </div>
+      <div class="tl-company">Amazon — via Concentrix · BPO</div>
+      <p class="tl-desc">Progressed through three roles handling 60+ daily customer calls on account, order, delivery, and service issues.</p>
+      <div class="tag-row"><span class="tag">Amazon</span><span class="tag">Customer Service</span><span class="tag">Team Progression</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<!-- TOOLS — STICKY HORIZONTAL GALLERY -->
+<section class="tools-pin-wrap" id="tools" style="height:300vh;">
+  <div class="tools-sticky">
+    <div class="tools-head reveal">
+      <div class="eyebrow">What I Use</div>
+      <h2 class="sec-title">Tools I've Worked In</h2>
+    </div>
+    <div class="tools-track" id="toolsTrack">
+      <div class="tool-card">
+        <div class="tool-num">01</div>
+        <div class="tool-name">Shopify</div>
+        <div class="tool-desc">Merchant support — orders, payments, and store-setup troubleshooting.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">02</div>
+        <div class="tool-name">Stripe</div>
+        <div class="tool-desc">Account verification and case review, plus macro-building for recurring scenarios.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">03</div>
+        <div class="tool-name">Amazon Seller / CS Tools</div>
+        <div class="tool-desc">Customer service across account, order, delivery, and service inquiries.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">04</div>
+        <div class="tool-name">Zendesk-style Ticketing</div>
+        <div class="tool-desc">Ticket triage, SLA-focused queues, and structured case handling.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">05</div>
+        <div class="tool-name">CRM Systems</div>
+        <div class="tool-desc">Logging interactions, tracking case history, and escalation handoffs.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">06</div>
+        <div class="tool-name">MyLab / Pearson Vue</div>
+        <div class="tool-desc">Technical troubleshooting for student and educator platform access.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-num">07</div>
+        <div class="tool-name">Google Workspace</div>
+        <div class="tool-desc">Documentation, reporting, and day-to-day coordination.</div>
+      </div>
+    </div>
+    <div class="tools-progress">
+      <div class="tools-progress-fill" id="toolsProgressFill"></div>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">How I Work</div>
+      <h2 class="sec-title">Case Studies</h2>
+      <p class="sec-sub">A closer look at how each role was handled, start to finish.</p>
+    </div>
+
+    <div class="case reveal">
+      <span class="case-badge">SHOPIFY</span>
+      <h3 class="case-title">Holding CSAT Steady at High Ticket Volume</h3>
+      <div class="star-grid">
+        <div class="star-block">
+          <h4>Situation</h4>
+          <p>Shopify merchants needed fast, accurate resolution across a wide range of order, payment, and store-setup issues, with volume that could spike unpredictably.</p>
+        </div>
+        <div class="star-block">
+          <h4>Task</h4>
+          <p>Resolve 60–120 tickets a day without letting quality slip as volume rose.</p>
+        </div>
+        <div class="star-block">
+          <h4>Action</h4>
+          <p>Triaged tickets by urgency, used internal documentation to resolve first-contact where possible, and escalated store-setup edge cases with clear context so second-line teams didn't need to re-investigate.</p>
+        </div>
+        <div class="star-block">
+          <h4>Result</h4>
+          <p class="result-line">Sustained a 92% CSAT across the full ticket volume.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <span class="case-badge">STRIPE</span>
+      <h3 class="case-title">Building Reusable Macros for Recurring Cases</h3>
+      <div class="star-grid">
+        <div class="star-block">
+          <h4>Situation</h4>
+          <p>Account-verification cases followed a small set of recurring patterns, but responses were being written from scratch each time.</p>
+        </div>
+        <div class="star-block">
+          <h4>Task</h4>
+          <p>Handle a daily caseload accurately while finding ways to reduce repetitive manual work.</p>
+        </div>
+        <div class="star-block">
+          <h4>Action</h4>
+          <p>Reviewed common case types and authored 40 email macros covering the recurring scenarios, so responses stayed consistent and could be sent faster.</p>
+        </div>
+        <div class="star-block">
+          <h4>Result</h4>
+          <p class="result-line">Reduced response drafting time and gave the wider team a reusable library of vetted case responses.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <span class="case-badge">PEARSON</span>
+      <h3 class="case-title">Technical Troubleshooting Under Academic Deadlines</h3>
+      <div class="star-grid">
+        <div class="star-block">
+          <h4>Situation</h4>
+          <p>US educators and students needed working access to MyLab and Pearson Vue, often close to exam or assignment deadlines where downtime carried real stakes.</p>
+        </div>
+        <div class="star-block">
+          <h4>Task</h4>
+          <p>Diagnose and resolve access and platform issues over the phone, accurately and on the first call where possible.</p>
+        </div>
+        <div class="star-block">
+          <h4>Action</h4>
+          <p>Walked callers through structured troubleshooting steps, verified account and access status, and escalated confirmed platform-side issues rather than guessing.</p>
+        </div>
+        <div class="star-block">
+          <h4>Result</h4>
+          <p class="result-line">Maintained approximately 80% QA across 20–30 daily technical calls.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <span class="case-badge">NUVISION AUTOGLASS</span>
+      <h3 class="case-title">Coordinating a Rebate Workflow Across Two Countries</h3>
+      <div class="star-grid">
+        <div class="star-block">
+          <h4>Situation</h4>
+          <p>Windshield-installation rebates required accurate processing on the Philippines side, kept in sync with an Arizona-based counterpart handling the US side of the workflow.</p>
+        </div>
+        <div class="star-block">
+          <h4>Task</h4>
+          <p>Keep the rebate pipeline moving correctly while also fielding a full daily load of customer calls.</p>
+        </div>
+        <div class="star-block">
+          <h4>Action</h4>
+          <p>Managed the PH-side rebate steps end to end, communicated status directly with the Arizona counterpart, and handled 30–40 customer calls on top of that workflow.</p>
+        </div>
+        <div class="star-block">
+          <h4>Result</h4>
+          <p class="result-line">Kept a cross-border, cross-timezone rebate process running without dropped handoffs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <span class="case-badge">AMAZON</span>
+      <h3 class="case-title">Growing From Agent to Team Lead Assistant</h3>
+      <div class="star-grid">
+        <div class="star-block">
+          <h4>Situation</h4>
+          <p>A high-volume Amazon customer service floor needed consistent handling of account, order, delivery, and service calls — and reliable people to grow into support roles for the wider team.</p>
+        </div>
+        <div class="star-block">
+          <h4>Task</h4>
+          <p>Handle a full daily call load reliably, then take on added responsibility as trust was earned.</p>
+        </div>
+        <div class="star-block">
+          <h4>Action</h4>
+          <p>Handled 60+ calls daily as a CSR, was promoted to Subject Matter Specialist for deeper case knowledge, then to Team Lead Assistant supporting the floor.</p>
+        </div>
+        <div class="star-block">
+          <h4>Result</h4>
+          <p class="result-line">Progressed through three roles in under two and a half years and was recognized as top performer for three consecutive months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--cream-2);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">What I Bring</div>
+      <h2 class="sec-title">Tools &amp; Skills</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <h4>Platforms &amp; Tools</h4>
+        <p>Shopify · Stripe · Amazon Seller/CS tools · Zendesk-style ticketing · CRM systems · MyLab / Pearson Vue · Google Workspace</p>
+      </div>
+      <div class="skill-card">
+        <h4>Support &amp; Operations</h4>
+        <p>High-volume ticket &amp; call handling · Technical troubleshooting · Account verification · SOP adherence · CSAT &amp; QA discipline · Cross-border workflow coordination</p>
+      </div>
+      <div class="skill-card">
+        <h4>Communication</h4>
+        <p>English proficiency score 7.8/9 (SpeechAce) · Written case documentation · Macro &amp; template creation · Escalation handling</p>
+      </div>
+      <div class="skill-card">
+        <h4>Home Office Setup</h4>
+        <p>Asus Vivobook Go (Ryzen 5, 8GB RAM) · Dual monitor setup · Backup power station &amp; backup Wi-Fi · 223 Mbps down / 137 Mbps up home connection</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Let's Work Together</h2>
+      <p>Open to Customer Service VA, Technical Support VA, E-commerce VA, and General VA roles — across US, UK, and AU schedules.</p>
+      <div class="cta-links">
+        <a href="mailto:jerico.guanizo01@gmail.com">jerico.guanizo01@gmail.com</a>
+        <a href="tel:+63915546758">+63 915 546 758</a>
+        <a href="https://wa.me/69125546758" target="_blank">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/jerico-guanizo2419" target="_blank">LinkedIn</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/4525444" target="_blank">Onlinejobs.ph</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Jerico Guanizo — Bulan, Sorsogon, Philippines</div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = (i % 4) * 0.06 + 's';
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // Sticky horizontal gallery — translate the track as the pinned wrapper scrolls
+  const pinWrap = document.getElementById('tools');
+  const track = document.getElementById('toolsTrack');
+  const progressFill = document.getElementById('toolsProgressFill');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateToolsScroll(){
+    if (!pinWrap || !track || prefersReduced) return;
+    const rect = pinWrap.getBoundingClientRect();
+    const wrapHeight = pinWrap.offsetHeight;
+    const viewportH = window.innerHeight;
+    const scrollableDistance = wrapHeight - viewportH;
+    if (scrollableDistance <= 0) return;
+
+    let progress = (-rect.top) / scrollableDistance;
+    progress = Math.min(Math.max(progress, 0), 1);
+
+    const maxTranslate = Math.max(track.scrollWidth - window.innerWidth, 0);
+    track.style.transform = `translateX(-${progress * maxTranslate}px)`;
+    if (progressFill) progressFill.style.width = (progress * 100) + '%';
+
+    // Center-focus coverflow: scale/fade/blur each card by distance from viewport center
+    const viewportCenter = window.innerWidth / 2;
+    const cards = track.querySelectorAll('.tool-card');
+    let closestCard = null;
+    let closestDist = Infinity;
+
+    cards.forEach(card => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const dist = Math.abs(cardCenter - viewportCenter);
+      const deadzone = 70;
+      const maxDist = 420;
+      const rawT = dist <= deadzone ? 0 : (dist - deadzone) / (maxDist - deadzone);
+      const t = Math.min(Math.max(rawT, 0), 1) ** 1.5;
+
+      const scale = 1.08 - t * 0.24;
+      const opacity = 1 - t * 0.55;
+      const blur = t * 3.5;
+
+      card.style.transform = `scale(${scale})`;
+      card.style.opacity = opacity.toFixed(2);
+      card.style.filter = `blur(${blur.toFixed(1)}px)`;
+
+      if (dist < closestDist) { closestDist = dist; closestCard = card; }
+    });
+
+    cards.forEach(card => card.classList.toggle('is-active', card === closestCard));
+  }
+
+  window.addEventListener('scroll', updateToolsScroll, { passive: true });
+  window.addEventListener('resize', updateToolsScroll);
+  updateToolsScroll();
+</script>
+</body>
+</html>
